@@ -1,0 +1,184 @@
+/* src/components/About.css */
+.about {
+  padding: 8rem 2rem;
+  background: #fff;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.about-title {
+  font-size: 5rem;
+  letter-spacing: 6px;
+  color: #1A1A1A;
+  margin-bottom: 1rem;
+}
+
+.title-underline {
+  width: 100px;
+  height: 4px;
+  background: #FF6B35;
+  margin: 0 auto 2rem;
+}
+
+.about-subtitle {
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  color: #666;
+  font-weight: 300;
+}
+
+.about-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+}
+
+.about-card {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #FAFAFA;
+  border-radius: 0;
+  transition: all 0.4s ease;
+  animation: fadeInUp 0.8s ease both;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: #FF6B35;
+  transition: height 0.4s ease;
+  z-index: 0;
+}
+
+.about-card:hover::before {
+  height: 100%;
+}
+
+.about-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.card-icon {
+  font-size: 4rem;
+  color: #FF6B35;
+  margin-bottom: 2rem;
+  transition: all 0.4s ease;
+}
+
+.about-card:hover .card-icon {
+  color: #fff;
+  transform: scale(1.15);
+}
+
+.about-card h3 {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  color: #1A1A1A;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+  transition: color 0.4s ease;
+}
+
+.about-card:hover h3 {
+  color: #fff;
+}
+
+.about-card p {
+  color: #666;
+  line-height: 1.8;
+  font-size: 0.95rem;
+  position: relative;
+  z-index: 1;
+  transition: color 0.4s ease;
+}
+
+.about-card:hover p {
+  color: #fff;
+}
+
+.about-cta {
+  text-align: center;
+  margin-top: 6rem;
+}
+
+.about-cta h3 {
+  font-size: 2.5rem;
+  letter-spacing: 4px;
+  color: #1A1A1A;
+  margin-bottom: 2rem;
+}
+
+.cta-btn {
+  padding: 1.2rem 3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: #1A1A1A;
+  color: #fff;
+  border: 3px solid #1A1A1A;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.cta-btn:hover {
+  background: #FF6B35;
+  border-color: #FF6B35;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 4rem 1rem;
+  }
+
+  .about-title {
+    font-size: 3rem;
+  }
+
+  .about-subtitle {
+    font-size: 1rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-cta h3 {
+    font-size: 1.8rem;
+  }
+}
