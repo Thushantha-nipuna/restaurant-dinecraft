@@ -1,9 +1,9 @@
-// src/components/Hero.js
+
 import React, { useState, useEffect } from 'react';
 import './Hero.css';
 
 function Hero() {
-  // Array of your background images
+  // array of bg imgs
   const images = [
     `${process.env.PUBLIC_URL}/images/hero-bg-1.jpg`,
     `${process.env.PUBLIC_URL}/images/hero-bg-2.jpg`,
@@ -14,15 +14,15 @@ function Hero() {
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // Slideshow effect - changes every 10 seconds
+  // Slideshow effect
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => 
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, 10000); // 10 seconds
+    }, 10000); 
 
-    return () => clearInterval(interval); // Cleanup on unmount
+    return () => clearInterval(interval); 
   }, [images.length]);
 
   const scrollToGallery = () => {
@@ -38,7 +38,7 @@ function Hero() {
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     backgroundAttachment: 'fixed',
-    transition: 'background-image 1s ease-in-out' // Smooth transition
+    transition: 'background-image 1s ease-in-out' 
   };
 
   return (
@@ -75,11 +75,7 @@ function Hero() {
           />
         ))}
       </div>
-        {/*
-      <div className="scroll-indicator">
-        <span>SCROLL</span>
-        <div className="scroll-line"></div>
-      </div> */}
+        
     </section>
   );
 }

@@ -1,7 +1,7 @@
-// src/components/Gallery.js
+
 import React, { useState } from 'react';
 import './Gallery.css';
-
+/*menu items*/
 function Gallery() {
   const menuItems = [
     { id: 1, name: 'SIGNATURE BURGER', category: 'MAINS', image: '/images/gallery/dish1.jpg' },

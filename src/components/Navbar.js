@@ -1,4 +1,4 @@
-// src/components/Navbar.js
+
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 
@@ -43,6 +43,7 @@ function Navbar() {
           <li onClick={() => scrollToSection('home')}>HOME</li>
           <li onClick={() => scrollToSection('about')}>ABOUT</li>
           <li onClick={() => scrollToSection('gallery')}>MENU</li>
+          <li onClick={() => scrollToSection('location')}>LOCATION</li>
           <li onClick={() => scrollToSection('contact')}>CONTACT</li>
           <li>
             <button className="order-btn">ORDER NOW</button>

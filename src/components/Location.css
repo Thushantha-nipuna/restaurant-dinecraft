@@ -1,0 +1,167 @@
+
+.location {
+  padding: 8rem 2rem;
+  background: #fff;
+}
+
+.location-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.location-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.location-header h2 {
+  font-size: 5rem;
+  letter-spacing: 6px;
+  color: #1A1A1A;
+  margin-bottom: 1rem;
+}
+
+.location-header p {
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  color: #666;
+  font-weight: 300;
+}
+
+.location-content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.location-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.info-card {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 2rem;
+  background: #FAFAFA;
+  transition: all 0.3s ease;
+}
+
+.info-card:hover {
+  background: #FF6B35;
+  transform: translateX(10px);
+}
+
+.info-icon {
+  font-size: 2.5rem;
+  color: #FF6B35;
+  transition: color 0.3s ease;
+}
+
+.info-card:hover .info-icon {
+  color: #fff;
+}
+
+.info-text h3 {
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  color: #1A1A1A;
+  margin-bottom: 0.8rem;
+  transition: color 0.3s ease;
+}
+
+.info-card:hover .info-text h3 {
+  color: #fff;
+}
+
+.info-text p {
+  color: #666;
+  line-height: 1.8;
+  font-size: 0.95rem;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.info-card:hover .info-text p {
+  color: #fff;
+}
+
+.directions-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.2rem 2.5rem;
+  background: #1A1A1A;
+  color: #fff;
+  border: 3px solid #1A1A1A;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Bebas Neue', sans-serif;
+  margin-top: 1rem;
+}
+
+.directions-btn:hover {
+  background: #FF6B35;
+  border-color: #FF6B35;
+  transform: translateY(-3px);
+}
+
+.directions-btn svg {
+  font-size: 1.3rem;
+}
+
+.location-map {
+  height: 500px;
+  border: 5px solid #1A1A1A;
+  overflow: hidden;
+}
+
+.location-map iframe {
+  filter: grayscale(20%);
+  transition: filter 0.3s ease;
+}
+
+.location-map:hover iframe {
+  filter: grayscale(0%);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .location-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .location-map {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .location {
+    padding: 4rem 1rem;
+  }
+
+  .location-header h2 {
+    font-size: 3rem;
+  }
+
+  .location-header p {
+    font-size: 1rem;
+  }
+
+  .info-card {
+    padding: 1.5rem;
+  }
+
+  .location-map {
+    height: 300px;
+  }
+}

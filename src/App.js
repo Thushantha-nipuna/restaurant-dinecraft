@@ -1,10 +1,12 @@
-// src/App.js
+
 import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Gallery from './components/Gallery';
+import Location from './components/Location';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
@@ -14,6 +16,8 @@ function App() {
       <Hero />
       <About />
       <Gallery />
+      <Location />
+      <Contact />
       <Footer />
     </div>
   );

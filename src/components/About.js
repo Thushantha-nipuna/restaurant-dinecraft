@@ -1,9 +1,11 @@
-// src/components/About.js
-import React from 'react';
+
+import React, { useState } from 'react';
 import './About.css';
 import { FaUtensils, FaTruck, FaClock, FaAward } from 'react-icons/fa';
+import MenuModal from './MenuModal';
 
 function About() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const services = [
     {
       icon: <FaUtensils />,
@@ -57,8 +59,12 @@ function About() {
 
       <div className="about-cta">
         <h3>EXPERIENCE THE DIFFERENCE</h3>
-        <button className="cta-btn">VIEW FULL MENU</button>
+        <button className="cta-btn" onClick={() => setIsMenuOpen(true)}>
+          VIEW FULL MENU
+        </button>
       </div>
+
+      <MenuModal isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
     </section>
   );
 }
