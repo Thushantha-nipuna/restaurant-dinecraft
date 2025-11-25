@@ -151,9 +151,9 @@
 }
 
 .footer-legal span {
-  color: #333;
+  color: #323131;
 }
-
+/*Responsive 4 diff screens*/
 @media (max-width: 1024px) {
   .footer-container {
     grid-template-columns: 1fr 1fr;
