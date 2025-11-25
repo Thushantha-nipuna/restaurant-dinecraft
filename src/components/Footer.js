@@ -12,9 +12,9 @@ function Footer() {
             <h2>DINECRAFT</h2>
             <p>Crafting memorable dining experiences since 2020</p>
             <div className="social-icons">
-              <a href="#" aria-label="Instagram"><FaInstagram /></a>
-              <a href="#" aria-label="Facebook"><FaFacebookF /></a>
-              <a href="#" aria-label="Twitter"><FaTwitter /></a>
+              <a href="https://instagram.com" aria-label="Instagram"><FaInstagram /></a>
+              <a href="https://facebook.com" aria-label="Facebook"><FaFacebookF /></a>
+              <a href="https://twitter.com" aria-label="Twitter"><FaTwitter /></a>
             </div>
           </div>
 
@@ -29,7 +29,7 @@ function Footer() {
                 <FaEnvelope />
                 <span>hello@dinecraft.lk</span>
               </a>
-              <a href="#">
+              <a href="#!" onClick={(e) => e.preventDefault()}>
                 <FaMapMarkerAlt />
                 <span>123 Galle Road, Colombo 03</span>
               </a>
@@ -55,8 +55,8 @@ function Footer() {
             <div className="footer-links">
               <a href="#about">About Us</a>
               <a href="#gallery">Menu</a>
-              <a href="#">Reservations</a>
-              <a href="#">Careers</a>
+              <a href="#!" onClick={(e) => e.preventDefault()}>Reservations</a>
+              <a href="#!" onClick={(e) => e.preventDefault()}>Careers</a>
             </div>
           </div>
         </div>
@@ -65,9 +65,9 @@ function Footer() {
       <div className="footer-bottom">
         <p>&copy; 2025 THUSHANTHA NIPUNA. ALL RIGHTS RESERVED.</p>
         <div className="footer-legal">
-          <a href="#">PRIVACY POLICY</a>
+          <a href="#!" onClick={(e) => e.preventDefault()}>PRIVACY POLICY</a>
           <span>|</span>
-          <a href="#">TERMS OF SERVICE</a>
+          <a href="#!" onClick={(e) => e.preventDefault()}>TERMS OF SERVICE</a>
         </div>
       </div>
     </footer>
